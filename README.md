@@ -21,4 +21,7 @@ Run:
 
 Optionally, change the targe directory setting the `TARGETDIR` environment variable.
 
-**Author: Lucas Cavalcante<lucascpcavalcante@gmail.com>, 2021**
+##
+
+<sup>**Author: Lucas Cavalcante\<lucascpcavalcante@gmail.com\>, 2021**</sup>
+
