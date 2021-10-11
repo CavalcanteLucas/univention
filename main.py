@@ -83,7 +83,9 @@ def move_files_of_an_owner(username: str) -> None:
     files = get_all_files_owned_by_user(username)
     try:
         move_files(files)
-        _log.info(f" [*] Successfully moved all files owned by user '{username}'")
+        _log.info(
+            f" [*] Successfully moved all files owned by user '{username}'"
+        )
     except Exception as exc:
         _log.error(
             ' [!] Could not move files owned by %r. Task raised exception: %r'
