@@ -3,4 +3,3 @@ __pycache__/
 .envrc
 out.log
 sourcedir/
-archive/

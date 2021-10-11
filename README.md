@@ -21,6 +21,8 @@ Run:
 
 Optionally, change the targe directory setting the `TARGETDIR` environment variable.
 
+Output log will be reported on file `out.log`.
+
 ##
 
 <sup>**Author: Lucas Cavalcante\<lucascpcavalcante@gmail.com\>, 2021**</sup>

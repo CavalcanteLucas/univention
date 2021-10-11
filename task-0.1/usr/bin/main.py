@@ -43,7 +43,7 @@ def move_files(files: list) -> None:
         _log.info(f" [*] Directory '{TARGETDIR}' created")
     for file in files:
         try:
-            call(f'mv {file} {TARGETDIR}', shell=True)
+            call(f'mv {file} {TARGETDIR}', shell=True, stdout=PIPE)
             _log.info(f" [*] Moved '{file}' to directory '{TARGETDIR}'")
         except Exception as exc:
             _log.error(
@@ -58,9 +58,9 @@ def get_all_files_owned_by_user(username: str) -> list:
     Get all files owned by an user in the filesystem.
     """
     try:
-        proc = Popen(f'find / -user {username} 2>&-', shell=True, stdout=PIPE)
-        output = proc.stdout.read()
-        files = output.decode('utf-8').splitlines()
+        with Popen(f'find / -user {username} 2>&-', shell=True, stdout=PIPE) as proc:
+            output = proc.stdout.read()
+            files = output.decode('utf-8').splitlines()
         _log.info(f" [*] Obtained list of files owned by user '{username}'")
         return files
     except Exception as exc:
@@ -90,10 +90,13 @@ def move_files_of_an_owner(username: str) -> None:
         raise exc
 
 
-def move_files_of_a_group(groupname_value: str) -> None:
-    group_members = get_group_members(groupname_value)
+def move_files_of_a_group(groupname: str) -> None:
+    group_members = get_group_members(groupname)
     for user in group_members:
         move_files_of_an_owner(user)
+    _log.info(
+        f" [*] Successfully moved all files owned by users of group '{groupname}'"
+    )
 
 
 if __name__ == '__main__':
