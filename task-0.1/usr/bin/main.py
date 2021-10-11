@@ -8,11 +8,7 @@ This script moves all files from all members of a group to an `archive`
 folder.
 The name of the group is be a parameter of the program.
 
-Change the targe directory setting the `TARGETDIR` environment variable.
-
-Example:
-
->>> python main.py --groupname {GROUP_NAME}
+Optionally, change the targe directory setting the `TARGETDIR` environment variable.
 """
 
 from argparse import ArgumentParser

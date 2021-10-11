@@ -10,4 +10,15 @@ The program should be installable as a Debian package and should be made availab
 
 ##
 
-Author: Lucas Cavalcante, 2021
+
+### Instructions of use:
+
+Run:
+
+```
+>>> ./task-0.1/usr/bin/main --groupname {GROUP_NAME}
+```
+
+Optionally, change the targe directory setting the `TARGETDIR` environment variable.
+
+**Author: Lucas Cavalcante<lucascpcavalcante@gmail.com>, 2021**
