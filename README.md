@@ -13,9 +13,9 @@ The Debian package does not have to be built, the sources are sufficient.
 
 ##
 
-### Instructions of use:
+**Instructions of use:**
 
-Run:
+To run the script, execute:
 
 ```
 >>> python /task-0.1/usr/bin/main.py --groupname {GROUP_NAME}
@@ -27,18 +27,18 @@ You can use the file `.envrc`, with the command `direnv allow`.
 Output log will be reported on file `out.log`.
 
 
-**Test**:
+**Testing**:
 
 In order to run the test suite, make sure to have all required dependencies installed.
 For that, it is mostly recommended to create a virtual environment.
-If you have pyenv installed, run:
+If you have `pyenv` installed, run:
 ```
 pyenv virtualenv 3.8.10 univention
 pyenv activate univention
 pip install -r requirements.txt
 ```
 
-Then run:
+Then execute:
 ```
 >>> python /task-0.1/usr/bin/test.py
 ```
