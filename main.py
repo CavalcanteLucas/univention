@@ -108,23 +108,3 @@ if __name__ == '__main__':
 
     groupname_value = args.groupname
     move_files_of_a_group(groupname_value)
-
-    # group_members = get_group_members(groupname_value)
-    # for user in group_members:
-    #      move_files_of_an_owner(user)
-    # files = get_all_files_owned_by_user(user)
-    # move_files(files)
-
-
-# def get_source_files(dirpath: str) -> list:
-#     return [
-#         os.path.join(os.path.abspath(dirpath), file) for file in os.listdir(dirpath)
-#     ]
-
-
-# def get_file_owner(filepath: str) -> str:
-#     return getpwuid(os.stat(filepath).st_uid).pw_name
-
-
-# def get_selected_files(files_and_owners: list, group_members: list) -> list:
-#     return [file for file, owner in files_and_owners if owner in group_members]
