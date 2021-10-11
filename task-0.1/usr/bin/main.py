@@ -6,7 +6,7 @@
 """
 This script moves all files from all members of a group to an `archive`
 folder.
-The name of the group is be a parameter of the program.
+The name of the group should be a parameter of the program.
 
 Optionally, change the targe directory setting the `TARGETDIR` environment variable.
 """
