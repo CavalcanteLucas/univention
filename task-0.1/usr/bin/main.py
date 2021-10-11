@@ -74,7 +74,7 @@ def get_all_files_owned_by_user(username: str) -> list:
 def move_files_of_an_owner(username: str) -> None:
     """
     Move all files in the filesystem owned by an user to the
-    `TARGETDIR` directory
+    `TARGETDIR` directory.
     """
     files = get_all_files_owned_by_user(username)
     try:
@@ -91,6 +91,10 @@ def move_files_of_an_owner(username: str) -> None:
 
 
 def move_files_of_a_group(groupname: str) -> None:
+    """
+    Move all files in the filesystem owned by user of a given group to
+    the `TARGETDIR` directory.
+    """
     group_members = get_group_members(groupname)
     for user in group_members:
         move_files_of_an_owner(user)
@@ -101,7 +105,7 @@ def move_files_of_a_group(groupname: str) -> None:
 
 if __name__ == '__main__':
     """
-    Main script function
+    Main script function.
     """
     parser = ArgumentParser(description='Enter target group.')
     parser.add_argument('--groupname', type=str, default='')

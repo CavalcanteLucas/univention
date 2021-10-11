@@ -1,8 +1,3 @@
-#!/usr/bin/python3
-# -*- coding: utf-8 -*-
-#
-# by Lucas Cavalcante, 2021
-
 from mock import patch
 from parameterized import parameterized
 from subprocess import call
