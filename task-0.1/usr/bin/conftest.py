@@ -14,10 +14,5 @@ filename1 = f'{test_dir}/file1'
 filename2 = f'{test_dir}/file2'
 filename3 = f'{test_dir}/file3'
 
-
 def mock_getgrall():
     return [groupA, groupB, groupC, groupD, groupE]
-
-
-def mock_get_group_members():
-    return []
