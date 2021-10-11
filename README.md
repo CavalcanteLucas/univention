@@ -21,7 +21,7 @@ Run:
 >>> python /task-0.1/usr/bin/main.py --groupname {GROUP_NAME}
 ```
 
-Optionally, change the targe directory setting the `TARGETDIR` environment variable.
+Optionally, change the target directory by setting the `TARGETDIR` environment variable.
 You can use the file `.envrc`, with the command `direnv allow`.
 
 Output log will be reported on file `out.log`.
