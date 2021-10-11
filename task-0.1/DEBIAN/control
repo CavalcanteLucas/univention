@@ -1,0 +1,8 @@
+Package: task
+Version: 0.1
+Architecture: all
+Maintainer: Lucas Cavalcante<lucascpcavalcante@gmail.com>
+Depends: python3
+Installed-Size: 2
+Homepage: https://github.com/CavalcanteLucas/univention.git
+Description: This script moves all files from all members of a group to an `archive` folder.
